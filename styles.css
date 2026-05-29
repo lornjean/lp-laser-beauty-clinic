@@ -419,6 +419,19 @@ h3 {
   border-bottom: 1px solid rgba(255, 253, 248, 0.12);
 }
 
+.price-table .price-category {
+  background: rgba(255, 253, 248, 0.12);
+  padding-block: 14px;
+}
+
+.price-table .price-category span {
+  color: #ead3b2;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .price-table div:last-child {
   border-bottom: 0;
 }
