@@ -447,6 +447,15 @@ h3 {
   color: rgba(255, 253, 248, 0.78);
 }
 
+.prices-section .price-reminder {
+  color: #ead3b2;
+  font-weight: 800;
+}
+
+.price-heading-button {
+  margin-top: 22px;
+}
+
 .price-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
