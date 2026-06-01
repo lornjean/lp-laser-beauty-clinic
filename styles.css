@@ -189,6 +189,9 @@ a {
   position: absolute;
   inset: 0;
   background:
+    radial-gradient(circle at 50% 38%, rgba(255, 253, 248, 0.64), transparent 30%),
+    repeating-linear-gradient(135deg, rgba(107, 62, 33, 0.055) 0 1px, transparent 1px 18px),
+    repeating-linear-gradient(45deg, rgba(168, 121, 68, 0.04) 0 1px, transparent 1px 22px),
     linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(248, 239, 229, 0.94) 52%, rgba(239, 226, 209, 0.96)),
     linear-gradient(135deg, rgba(107, 62, 33, 0.08), transparent 42%, rgba(168, 121, 68, 0.1)),
     var(--cream);
