@@ -59,7 +59,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 18px clamp(18px, 4vw, 56px);
-  color: var(--white);
+  color: var(--deep);
   transition: background 180ms ease, box-shadow 180ms ease, color 180ms ease;
 }
 
@@ -89,8 +89,8 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.96;
+  filter: none;
+  opacity: 1;
 }
 
 .site-header.is-scrolled .brand-mark,
@@ -134,7 +134,7 @@ a {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  background: rgba(255, 253, 248, 0.2);
+  background: rgba(107, 62, 33, 0.08);
   outline: none;
 }
 
@@ -181,7 +181,7 @@ a {
   display: grid;
   align-items: center;
   padding: 132px clamp(20px, 7vw, 96px) 84px;
-  color: var(--white);
+  color: var(--deep);
   overflow: hidden;
 }
 
@@ -189,10 +189,17 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(55, 33, 20, 0.82), rgba(107, 62, 33, 0.48) 50%, rgba(248, 239, 229, 0.26)),
-    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=2200&q=85") center/cover;
-  filter: sepia(0.36) saturate(1.05) brightness(0.94);
-  transform: scale(1.03);
+    linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(248, 239, 229, 0.94) 52%, rgba(239, 226, 209, 0.96)),
+    linear-gradient(135deg, rgba(107, 62, 33, 0.08), transparent 42%, rgba(168, 121, 68, 0.1)),
+    var(--cream);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(107, 62, 33, 0.14);
+  pointer-events: none;
 }
 
 .hero-content {
@@ -207,13 +214,13 @@ a {
   height: auto;
   object-fit: contain;
   margin: 0 auto 28px;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
+  filter: none;
+  opacity: 1;
 }
 
 .eyebrow {
   margin: 0 0 12px;
-  color: #d8bd91;
+  color: var(--coffee);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -285,9 +292,9 @@ h3 {
 }
 
 .button.secondary {
-  color: var(--white);
-  border-color: rgba(255, 253, 248, 0.72);
-  background: rgba(248, 239, 229, 0.08);
+  color: var(--coffee);
+  border-color: rgba(107, 62, 33, 0.32);
+  background: rgba(255, 253, 248, 0.44);
 }
 
 .button.secondary.dark {
@@ -297,7 +304,7 @@ h3 {
 }
 
 .text-button {
-  color: var(--white);
+  color: var(--coffee);
   padding-inline: 12px;
 }
 
@@ -537,6 +544,12 @@ h3 {
   max-width: 720px;
   margin: 16px 0 0;
   color: rgba(255, 253, 248, 0.8);
+}
+
+.booking-panel .button.secondary {
+  color: var(--white);
+  border-color: rgba(255, 253, 248, 0.62);
+  background: rgba(255, 253, 248, 0.08);
 }
 
 .patch-section {
