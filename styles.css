@@ -488,6 +488,16 @@ h3 {
   text-align: right;
 }
 
+.treatment-row {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 16px;
+}
+
+.laser-area-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .fresha-card {
   display: flex;
   flex-direction: column;
@@ -802,6 +812,10 @@ textarea:focus {
   }
 
   .fresha-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .laser-area-row {
     grid-template-columns: 1fr;
   }
 
