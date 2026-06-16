@@ -871,9 +871,10 @@ textarea:focus {
 }
 
 .site-footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(280px, 1fr) auto;
   gap: 24px;
+  align-items: start;
   padding: 34px clamp(20px, 7vw, 96px);
   background: var(--deep);
   color: var(--white);
@@ -882,6 +883,27 @@ textarea:focus {
 .site-footer p {
   margin: 6px 0 0;
   color: rgba(255, 253, 248, 0.7);
+}
+
+.footer-legal {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.footer-legal strong,
+.footer-legal b {
+  color: var(--white);
+}
+
+.footer-legal a {
+  color: rgba(255, 253, 248, 0.78);
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: #d8bd91;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .footer-links {
