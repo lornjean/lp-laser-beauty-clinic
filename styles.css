@@ -693,6 +693,106 @@ h3 {
   color: rgba(47, 33, 26, 0.78);
 }
 
+.faq-section {
+  background:
+    radial-gradient(circle at top left, rgba(195, 151, 86, 0.16), transparent 32%),
+    linear-gradient(180deg, var(--cream), var(--white));
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+  max-width: 980px;
+}
+
+.faq-item {
+  border: 1px solid rgba(92, 63, 46, 0.14);
+  background: rgba(255, 253, 248, 0.76);
+  box-shadow: 0 18px 44px rgba(90, 61, 39, 0.08);
+}
+
+.faq-item summary {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 22px 64px 22px 24px;
+  color: var(--coffee);
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.7vw, 1.32rem);
+  font-weight: 700;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  border: 1px solid rgba(92, 63, 46, 0.2);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--coffee);
+  font-family: var(--sans);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item div {
+  padding: 0 24px 24px;
+  color: var(--muted);
+}
+
+.faq-item p {
+  margin: 0 0 14px;
+  line-height: 1.75;
+}
+
+.faq-item p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  margin: 14px 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-item li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.55;
+}
+
+.faq-item li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.faq-item .button {
+  margin-top: 8px;
+}
+
 .contact-section {
   background: var(--white);
 }
@@ -932,6 +1032,18 @@ textarea:focus {
 
   .price-table strong {
     text-align: left;
+  }
+
+  .faq-item summary {
+    padding: 20px 58px 20px 20px;
+  }
+
+  .faq-item div {
+    padding: 0 20px 22px;
+  }
+
+  .faq-item ul {
+    grid-template-columns: 1fr;
   }
 
   .about-image img {
