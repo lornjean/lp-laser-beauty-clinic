@@ -191,10 +191,10 @@ a {
 
 .hero {
   position: relative;
-  min-height: 94vh;
+  min-height: 84vh;
   display: grid;
   align-items: center;
-  padding: 132px clamp(20px, 7vw, 96px) 84px;
+  padding: 118px clamp(20px, 7vw, 96px) 64px;
   color: var(--coffee);
   overflow: hidden;
 }
@@ -246,7 +246,7 @@ a {
 }
 
 .hero-logo {
-  width: min(520px, 74vw);
+  width: min(480px, 70vw);
   height: auto;
   object-fit: contain;
   margin: 0 auto 28px;
@@ -292,6 +292,7 @@ h3 {
 }
 
 .hero-actions,
+.intro-actions,
 .booking-actions {
   display: flex;
   flex-wrap: wrap;
@@ -357,7 +358,7 @@ h3 {
 }
 
 .intro-band {
-  padding: clamp(44px, 7vw, 78px) clamp(20px, 7vw, 96px);
+  padding: clamp(38px, 6vw, 64px) clamp(20px, 7vw, 96px);
   background: var(--white);
 }
 
@@ -366,19 +367,27 @@ h3 {
 }
 
 .intro-statement > div {
-  width: min(880px, 100%);
+  width: min(920px, 100%);
   margin: 0 auto;
 }
 
 .intro-statement h2 {
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: clamp(2.05rem, 4.2vw, 3.55rem);
+  text-wrap: balance;
 }
 
 .intro-statement p:not(.eyebrow) {
-  max-width: 680px;
+  max-width: 720px;
   margin: 16px auto 0;
   color: var(--text);
   font-size: 1.08rem;
+  text-wrap: balance;
+}
+
+.intro-actions {
+  margin-top: 24px;
 }
 
 .intro-tags {
@@ -389,7 +398,11 @@ h3 {
   margin-top: 26px;
 }
 
-.intro-tags span {
+.intro-tags a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
   padding: 9px 14px;
   border: 1px solid var(--border-soft);
   border-radius: 999px;
@@ -397,6 +410,27 @@ h3 {
   background: rgba(247, 243, 236, 0.82);
   font-size: 0.9rem;
   font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.intro-tags a:hover,
+.intro-tags a:focus-visible {
+  color: var(--button-brown);
+  background: var(--white);
+  border-color: rgba(201, 169, 106, 0.58);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+#laser-hair-removal,
+#ipl-skin-treatments,
+#facials,
+#microneedling,
+#dermaplaning,
+#diamond-dermabrasion {
+  scroll-margin-top: 110px;
 }
 
 .section {
@@ -1054,8 +1088,8 @@ textarea:focus {
   }
 
   .hero {
-    min-height: 88vh;
-    padding: 118px 20px 56px;
+    min-height: 80vh;
+    padding: 108px 20px 48px;
   }
 
   .hero-logo {
@@ -1068,6 +1102,7 @@ textarea:focus {
   }
 
   .hero-actions,
+  .intro-actions,
   .booking-actions {
     display: grid;
   }
@@ -1078,6 +1113,20 @@ textarea:focus {
 
   .intro-item {
     padding: 24px 20px;
+  }
+
+  .intro-statement h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .intro-tags {
+    justify-content: flex-start;
+  }
+
+  .intro-tags a {
+    width: 100%;
+    min-height: 44px;
+    text-align: center;
   }
 
   .section {
