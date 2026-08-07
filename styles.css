@@ -1,17 +1,18 @@
 :root {
-  --cream: #F7F2EB;
-  --linen: #F1E8DC;
-  --sand: #E4D6C4;
-  --taupe: #8A6D5A;
-  --coffee: #5B3525;
-  --deep: #5B3525;
+  --cream: #F7F3EC;
+  --linen: #F4EDE4;
+  --sand: #E8DCCB;
+  --taupe: #9A7B65;
+  --coffee: #7A5743;
+  --deep: #6B4A39;
+  --button-brown: #5B3525;
   --gold: #C9A96A;
   --white: #FFFFFF;
   --text: #4A4A4A;
   --muted: #66605A;
   --button-hover: #704330;
-  --border-soft: rgba(91, 53, 37, 0.14);
-  --shadow: 0 22px 60px rgba(91, 53, 37, 0.13);
+  --border-soft: rgba(122, 87, 67, 0.14);
+  --shadow: 0 22px 60px rgba(122, 87, 67, 0.12);
 }
 
 * {
@@ -68,9 +69,9 @@ a {
 
 .site-header.is-scrolled,
 .site-header.is-open {
-  background: rgba(247, 242, 235, 0.94);
+  background: rgba(247, 243, 236, 0.94);
   color: var(--coffee);
-  box-shadow: 0 12px 36px rgba(91, 53, 37, 0.1);
+  box-shadow: 0 12px 36px rgba(122, 87, 67, 0.1);
   backdrop-filter: blur(16px);
 }
 
@@ -137,7 +138,7 @@ a {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  background: rgba(91, 53, 37, 0.08);
+  background: rgba(122, 87, 67, 0.08);
   outline: none;
 }
 
@@ -145,7 +146,7 @@ a {
 .site-header.is-scrolled .site-nav a:focus-visible,
 .site-header.is-open .site-nav a:hover,
 .site-header.is-open .site-nav a:focus-visible {
-  background: rgba(91, 53, 37, 0.08);
+  background: rgba(122, 87, 67, 0.08);
 }
 
 .site-nav .nav-cta {
@@ -156,7 +157,7 @@ a {
 
 .site-header.is-scrolled .site-nav .nav-cta,
 .site-header.is-open .site-nav .nav-cta {
-  background: var(--coffee);
+  background: var(--button-brown);
   color: var(--white);
 }
 
@@ -204,10 +205,10 @@ a {
   background:
     radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.84), transparent 32%),
     radial-gradient(circle at 18% 82%, rgba(201, 169, 106, 0.14), transparent 30%),
-    radial-gradient(circle at 84% 18%, rgba(91, 53, 37, 0.1), transparent 28%),
-    repeating-linear-gradient(135deg, rgba(91, 53, 37, 0.035) 0 1px, transparent 1px 20px),
+    radial-gradient(circle at 84% 18%, rgba(122, 87, 67, 0.08), transparent 28%),
+    repeating-linear-gradient(135deg, rgba(122, 87, 67, 0.03) 0 1px, transparent 1px 20px),
     repeating-linear-gradient(45deg, rgba(201, 169, 106, 0.03) 0 1px, transparent 1px 28px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 242, 235, 0.96) 54%, rgba(241, 232, 220, 0.98)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 243, 236, 0.96) 54%, rgba(244, 237, 228, 0.98)),
     var(--cream);
 }
 
@@ -225,8 +226,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(247, 242, 235, 0.82), rgba(255, 255, 255, 0.34), rgba(247, 242, 235, 0.82)),
-    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(247, 242, 235, 0.58) 72%);
+    linear-gradient(90deg, rgba(247, 243, 236, 0.82), rgba(255, 255, 255, 0.34), rgba(247, 243, 236, 0.82)),
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(247, 243, 236, 0.58) 72%);
 }
 
 .hero::after {
@@ -322,9 +323,9 @@ h3 {
 }
 
 .button.primary {
-  background: var(--coffee);
+  background: var(--button-brown);
   color: var(--white);
-  box-shadow: 0 14px 34px rgba(91, 53, 37, 0.22);
+  box-shadow: 0 14px 34px rgba(91, 53, 37, 0.2);
 }
 
 .button.primary:hover,
@@ -393,7 +394,7 @@ h3 {
   border: 1px solid var(--border-soft);
   border-radius: 999px;
   color: var(--coffee);
-  background: rgba(247, 242, 235, 0.82);
+  background: rgba(247, 243, 236, 0.82);
   font-size: 0.9rem;
   font-weight: 800;
 }
@@ -432,14 +433,14 @@ h3 {
   border: 1px solid var(--border-soft);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 14px 34px rgba(91, 53, 37, 0.08);
+  box-shadow: 0 14px 34px rgba(122, 87, 67, 0.08);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
   border-color: rgba(201, 169, 106, 0.36);
-  box-shadow: 0 22px 48px rgba(91, 53, 37, 0.12);
+  box-shadow: 0 22px 48px rgba(122, 87, 67, 0.12);
 }
 
 .service-card img {
@@ -479,8 +480,14 @@ h3 {
 
 .prices-section {
   background:
-    linear-gradient(135deg, rgba(91, 53, 37, 0.97), rgba(112, 67, 48, 0.94)),
+    linear-gradient(135deg, rgba(107, 74, 57, 0.94), rgba(139, 103, 82, 0.88)),
     var(--deep);
+  color: var(--white);
+}
+
+.prices-section h2,
+.prices-section h3,
+.booking-panel h2 {
   color: var(--white);
 }
 
@@ -557,9 +564,10 @@ h3 {
   flex-direction: column;
   gap: 14px;
   padding: clamp(18px, 2.6vw, 24px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
+  box-shadow: 0 16px 42px rgba(74, 52, 39, 0.12);
 }
 
 .fresha-card-head {
@@ -570,8 +578,8 @@ h3 {
   order: 2;
   margin-top: auto;
   padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  color: var(--gold);
+  border-top: 1px solid var(--border-soft);
+  color: var(--coffee);
   font-size: 0.88rem;
   font-weight: 800;
 }
@@ -583,29 +591,34 @@ h3 {
   min-height: 34px;
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--cream);
+}
+
+.fresha-card-head strong {
+  color: var(--button-brown);
 }
 
 .fresha-card h3 {
   font-size: clamp(1.28rem, 2.1vw, 1.62rem);
+  color: var(--coffee);
 }
 
 .fresha-card p {
   margin: 9px 0 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text);
   font-size: 0.96rem;
 }
 
 .fresha-card b {
-  color: var(--white);
+  color: var(--coffee);
 }
 
 .package-breakdown {
   margin-top: 12px;
   padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--border-soft);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--cream);
 }
 
 .package-breakdown ul {
@@ -613,7 +626,7 @@ h3 {
   gap: 6px;
   margin: 8px 0 12px;
   padding-left: 20px;
-  color: rgba(255, 255, 255, 0.84);
+  color: var(--text);
 }
 
 .package-breakdown p {
@@ -700,8 +713,8 @@ h3 {
   align-items: center;
   padding: clamp(28px, 5vw, 54px);
   background:
-    linear-gradient(135deg, rgba(91, 53, 37, 0.97), rgba(112, 67, 48, 0.94)),
-    var(--coffee);
+    linear-gradient(135deg, rgba(107, 74, 57, 0.94), rgba(139, 103, 82, 0.88)),
+    var(--deep);
   color: var(--white);
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -725,7 +738,7 @@ h3 {
   align-items: center;
   padding: clamp(70px, 10vw, 124px) clamp(20px, 7vw, 96px);
   background:
-    linear-gradient(90deg, rgba(247, 242, 235, 0.98), rgba(247, 242, 235, 0.84), rgba(247, 242, 235, 0.62)),
+    linear-gradient(90deg, rgba(247, 243, 236, 0.98), rgba(247, 243, 236, 0.84), rgba(247, 243, 236, 0.62)),
     url("https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1800&q=80") center/cover;
 }
 
@@ -753,7 +766,7 @@ h3 {
 .faq-item {
   border: 1px solid var(--border-soft);
   background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 18px 44px rgba(91, 53, 37, 0.08);
+  box-shadow: 0 18px 44px rgba(122, 87, 67, 0.08);
 }
 
 .faq-item summary {
@@ -780,7 +793,7 @@ h3 {
   width: 32px;
   height: 32px;
   transform: translateY(-50%);
-  border: 1px solid rgba(91, 53, 37, 0.2);
+  border: 1px solid rgba(122, 87, 67, 0.2);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -889,7 +902,7 @@ input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid rgba(91, 53, 37, 0.2);
+  border: 1px solid rgba(122, 87, 67, 0.2);
   border-radius: 8px;
   background: var(--white);
   color: var(--text);
