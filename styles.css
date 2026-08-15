@@ -1293,12 +1293,57 @@ textarea:focus {
   }
 
   .beauty-list-modal {
-    align-items: end;
-    padding: 14px;
+    align-items: center;
+    padding: 18px;
   }
 
   .beauty-list-popup {
-    width: 100%;
-    max-height: calc(100vh - 28px);
+    width: min(100%, 360px);
+    max-height: min(82vh, 620px);
+    padding: 22px 18px 18px;
+  }
+
+  .beauty-list-popup h2 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.04;
+  }
+
+  .beauty-list-popup > p {
+    margin: 10px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .beauty-list-popup .eyebrow {
+    max-width: calc(100% - 48px);
+    margin-bottom: 8px;
+    font-size: 0.68rem;
+  }
+
+  .beauty-list-popup .beauty-list-form {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .beauty-list-popup input {
+    padding: 11px 12px;
+  }
+
+  .beauty-list-popup .button {
+    min-height: 44px;
+    padding-block: 11px;
+  }
+
+  .beauty-list-popup .privacy-note {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .popup-close {
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    font-size: 1.25rem;
   }
 }
