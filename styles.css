@@ -540,8 +540,8 @@ h3 {
 
 .price-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+  gap: clamp(24px, 4vw, 40px);
   align-items: start;
 }
 
@@ -553,9 +553,9 @@ h3 {
 
 .menu-category {
   grid-column: 1 / -1;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: end;
-  justify-content: space-between;
   gap: 18px;
   padding: 28px 0 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -576,7 +576,11 @@ h3 {
 .menu-category h3 {
   color: var(--white);
   font-size: clamp(1.65rem, 3vw, 2.35rem);
-  text-align: right;
+  text-align: left;
+}
+
+.fresha-menu > .fresha-card:first-of-type {
+  grid-column: 1 / -1;
 }
 
 .treatment-row {
@@ -709,6 +713,10 @@ h3 {
   color: var(--text);
   border-radius: 8px;
   box-shadow: var(--shadow);
+}
+
+.price-note h3 {
+  color: var(--coffee);
 }
 
 .price-note p {
