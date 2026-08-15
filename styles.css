@@ -1013,7 +1013,9 @@ textarea:focus {
   z-index: 40;
   display: grid;
   place-items: center;
+  justify-items: center;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .beauty-list-modal-backdrop {
@@ -1293,13 +1295,17 @@ textarea:focus {
   }
 
   .beauty-list-modal {
+    place-items: center;
+    justify-items: center;
     align-items: center;
-    padding: 18px;
+    padding: 18px 14px;
   }
 
   .beauty-list-popup {
-    width: min(100%, 360px);
+    width: 100%;
+    max-width: 340px;
     max-height: min(82vh, 620px);
+    margin-inline: auto;
     padding: 22px 18px 18px;
   }
 
