@@ -93,15 +93,22 @@ beautyListForms.forEach((beautyListForm) => {
   beautyListForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    const data = new FormData(beautyListForm);
+    const subject = encodeURIComponent("LP Beauty List sign-up");
+    const body = encodeURIComponent(
+      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nMobile: ${data.get("mobile") || "Not provided"}\n\nThis person has asked to join the LP Beauty List.`
+    );
+
     localStorage.setItem(beautyListStorage.subscribed, "true");
     localStorage.removeItem(beautyListStorage.dismissed);
 
     const status = beautyListForm.querySelector("[data-beauty-list-status]");
     if (status) {
-      status.textContent = "Thank you, you have joined the LP Beauty List.";
+      status.textContent = "Opening your email app with the LP Beauty List sign-up ready to send.";
     }
 
     beautyListForm.reset();
+    window.location.href = `mailto:lorna@lplaserbeautyclinic.com?subject=${subject}&body=${body}`;
 
     if (beautyListModal && beautyListModal.contains(beautyListForm)) {
       window.setTimeout(() => closeBeautyList(false), 1400);
