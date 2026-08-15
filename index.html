@@ -596,7 +596,61 @@
         </form>
       </div>
     </section>
+
+    <section id="beauty-list" class="section beauty-list-section">
+      <div class="beauty-list-panel">
+        <div>
+          <p class="eyebrow">LP Beauty List</p>
+          <h2>Join the LP Beauty List</h2>
+          <p>Get exclusive offers, last-minute appointments and first access to new treatments.</p>
+        </div>
+        <form class="beauty-list-form" data-beauty-list-form>
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Mobile number <span>optional</span>
+            <input type="tel" name="mobile" autocomplete="tel">
+          </label>
+          <button class="button primary" type="submit">Join the List</button>
+          <p class="privacy-note">You can unsubscribe at any time. Your details will only be used for LP Laser Beauty Clinic updates and offers.</p>
+          <p class="form-status" data-beauty-list-status aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <div class="beauty-list-modal" data-beauty-list-modal hidden>
+    <div class="beauty-list-modal-backdrop" data-beauty-list-close></div>
+    <div class="beauty-list-popup" role="dialog" aria-modal="true" aria-labelledby="beauty-list-title">
+      <button class="popup-close" type="button" aria-label="Close LP Beauty List pop-up" data-beauty-list-close>&times;</button>
+      <p class="eyebrow">LP Beauty List</p>
+      <h2 id="beauty-list-title">Join the LP Beauty List</h2>
+      <p>Get exclusive offers, last-minute appointments and first access to new treatments.</p>
+      <form class="beauty-list-form" data-beauty-list-form>
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          Mobile number <span>optional</span>
+          <input type="tel" name="mobile" autocomplete="tel">
+        </label>
+        <button class="button primary" type="submit">Join the List</button>
+        <p class="privacy-note">You can unsubscribe at any time. Your details will only be used for LP Laser Beauty Clinic updates and offers.</p>
+        <p class="form-status" data-beauty-list-status aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div>
@@ -616,6 +670,7 @@
       <a href="#services">Treatments</a>
       <a href="#prices">Prices</a>
       <a href="#faq">FAQ</a>
+      <a href="#beauty-list">Beauty List</a>
       <a href="https://facesconsent.com/bookings/lorna-beanland" target="_blank" rel="noreferrer">Book</a>
       <a href="#contact">Contact</a>
     </div>
