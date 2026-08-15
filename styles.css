@@ -1310,11 +1310,15 @@ textarea:focus {
   }
 
   .beauty-list-popup {
-    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: calc(100vw - 32px);
     max-width: 340px;
     max-height: min(82vh, 620px);
-    margin-inline: auto;
+    margin: 0;
     padding: 22px 18px 18px;
+    transform: translate(-50%, -50%);
   }
 
   .beauty-list-popup h2 {
