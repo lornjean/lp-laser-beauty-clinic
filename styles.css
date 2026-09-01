@@ -429,7 +429,10 @@ h3 {
 #facials,
 #microneedling,
 #dermaplaning,
-#diamond-dermabrasion {
+#diamond-dermabrasion,
+#facial-aesthetics,
+#dermal-fillers,
+#lip-enhancement {
   scroll-margin-top: 110px;
 }
 
@@ -510,6 +513,172 @@ h3 {
 .service-card a:hover {
   color: var(--gold);
   text-decoration-color: var(--coffee);
+}
+
+.treatment-page {
+  padding-top: 92px;
+}
+
+.treatment-hero {
+  padding: clamp(92px, 13vw, 146px) clamp(20px, 7vw, 96px) clamp(54px, 8vw, 84px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 243, 236, 0.96)),
+    var(--cream);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 auto 26px;
+  width: min(1040px, 100%);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: var(--coffee);
+  font-weight: 800;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+}
+
+.treatment-hero-inner,
+.treatment-content,
+.treatment-cta {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+}
+
+.treatment-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.72fr);
+  gap: clamp(28px, 6vw, 70px);
+  align-items: center;
+}
+
+.treatment-hero h1 {
+  max-width: 780px;
+  font-size: clamp(2.7rem, 6vw, 5.5rem);
+  text-wrap: balance;
+}
+
+.treatment-hero p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 20px 0 0;
+  color: var(--text);
+  font-size: clamp(1.04rem, 2vw, 1.22rem);
+}
+
+.treatment-hero-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.treatment-content {
+  display: grid;
+  gap: clamp(24px, 4vw, 40px);
+  padding: clamp(56px, 8vw, 86px) clamp(20px, 7vw, 0px);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.content-panel {
+  padding: clamp(24px, 4vw, 34px);
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(122, 87, 67, 0.08);
+}
+
+.content-panel h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+}
+
+.content-panel h3 {
+  margin-top: 24px;
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+}
+
+.content-panel p,
+.content-panel li {
+  color: var(--text);
+}
+
+.content-panel ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.content-panel li + li {
+  margin-top: 7px;
+}
+
+.content-panel.full-width {
+  grid-column: 1 / -1;
+}
+
+.treatment-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.treatment-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  color: var(--coffee);
+  background: var(--cream);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.treatment-links a:hover,
+.treatment-links a:focus-visible {
+  border-color: rgba(201, 169, 106, 0.58);
+  background: var(--white);
+  outline: none;
+}
+
+.treatment-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: clamp(58px, 8vw, 88px);
+  padding: clamp(26px, 4vw, 42px);
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.treatment-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.treatment-cta p {
+  max-width: 680px;
+  margin: 12px 0 0;
+}
+
+.faq-mini {
+  display: grid;
+  gap: 12px;
 }
 
 .prices-section {
@@ -1363,5 +1532,39 @@ textarea:focus {
     width: 34px;
     height: 34px;
     font-size: 1.25rem;
+  }
+
+  .treatment-page {
+    padding-top: 76px;
+  }
+
+  .treatment-hero {
+    padding: 70px 20px 44px;
+  }
+
+  .treatment-hero-grid,
+  .content-grid,
+  .treatment-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+  }
+
+  .treatment-hero-image img {
+    aspect-ratio: 16 / 11;
+  }
+
+  .treatment-content {
+    padding: 50px 20px;
+  }
+
+  .content-panel.full-width {
+    grid-column: auto;
+  }
+
+  .treatment-cta {
+    margin-inline: 20px;
   }
 }
