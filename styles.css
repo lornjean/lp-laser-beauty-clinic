@@ -1689,3 +1689,39 @@ textarea:focus {
   html { scroll-behavior: auto; }
   .service-card { transition: none; }
 }
+
+/* Unpublished navigation and homepage menu refinement. */
+.treatments-nav { position: relative; }
+.treatments-nav > summary { cursor: pointer; list-style: none; padding: 10px 14px; border-radius: 999px; font-size: .92rem; font-weight: 600; }
+.treatments-nav > summary::-webkit-details-marker { display: none; }
+.treatments-nav > summary::after { content: "⌄"; margin-left: 7px; }
+.treatments-nav > summary:hover { background: rgba(122,87,67,.08); }
+.treatments-nav-links { position: absolute; top: calc(100% + 12px); left: 0; width: 300px; padding: 10px; border: 1px solid var(--border-soft); border-radius: 8px; color: var(--deep); background: var(--cream); box-shadow: var(--shadow); }
+.site-nav .treatments-nav-links a { display: block; border-radius: 5px; font-size: .88rem; padding: 11px 12px; }
+.treatments-nav-links a:first-child { border-bottom: 1px solid var(--border-soft); border-radius: 0; margin-bottom: 6px; }
+.menu-price-details { margin-top: 30px; border-block: 1px solid var(--border-soft); scroll-margin-top: 115px; }
+.menu-price-details > summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; cursor: pointer; list-style: none; color: var(--deep); }
+.menu-price-details > summary::-webkit-details-marker { display: none; }
+.menu-price-details > summary strong { font-family: "Cormorant Garamond",Georgia,serif; font-size: 1.8rem; }
+.menu-price-details > summary small { display: block; font-size: .93rem; color: var(--muted); }
+.menu-price-content { padding-bottom: 28px; }
+.menu-price-content .price-reminder { color: var(--coffee); font-weight: 600; }
+.grouped-price-links { max-width: 850px; margin: 22px 0 32px; }
+.grouped-price-links a { color: var(--coffee); text-underline-offset: 4px; }
+.services-section summary:focus-visible, .treatments-nav summary:focus-visible, .site-nav a:focus-visible { outline: 2px solid var(--coffee); outline-offset: 3px; }
+@media(max-width:980px) {
+  .site-nav { max-height: calc(100dvh - 115px); overflow-y: auto; visibility: hidden; }
+  .site-nav.is-open { visibility: visible; }
+  .treatments-nav > summary { border-radius: 5px; }
+  .treatments-nav-links { position: static; width: auto; margin: 4px 0 10px; border: 0; border-left: 2px solid var(--sand); border-radius: 0; box-shadow: none; padding: 0 0 0 10px; }
+}
+@media(max-width:640px) {
+  .menu-price-details > summary { align-items: flex-start; flex-direction: column; gap: 10px; }
+}
+
+/* Stock portraits: one shared frame, with subject-specific crop placement. */
+.main-treatment-grid .service-card img { background: var(--linen); }
+.main-treatment-grid .anti-wrinkle-photo { object-position: 50% 28%; }
+.main-treatment-grid .fillers-photo { object-position: 50% 50%; }
+.main-treatment-grid .boosters-photo { object-position: 50% 56%; }
+.main-treatment-grid .laser-treatment-photo { object-position: 50% 55%; }

@@ -115,3 +115,33 @@ beautyListForms.forEach((beautyListForm) => {
     }
   });
 });
+
+// Open retained detail anchors when following Prices or a historical deep link.
+const revealMenuAnchor = () => {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  const target = id && document.getElementById(id);
+  if (!target) return;
+  let node = target;
+  while (node) {
+    if (node.tagName === "DETAILS") node.open = true;
+    node = node.parentElement;
+  }
+  requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+};
+if (window.location.hash) revealMenuAnchor();
+window.addEventListener("hashchange", revealMenuAnchor);
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    document.querySelectorAll("[data-treatment-nav][open]").forEach(menu => { menu.open = false; menu.querySelector("summary").focus(); });
+  }
+});
+document.addEventListener("click", event => {
+  const anchor = event.target.closest("a[href]");
+  if (anchor) {
+    const destination = new URL(anchor.href, window.location.href);
+    if (destination.origin === window.location.origin && destination.pathname === window.location.pathname && destination.hash && destination.hash === window.location.hash) revealMenuAnchor();
+  }
+  document.querySelectorAll("[data-treatment-nav][open]").forEach(menu => {
+    if (!menu.contains(event.target) || event.target.closest("a")) menu.open = false;
+  });
+});
